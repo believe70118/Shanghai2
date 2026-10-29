@@ -3,115 +3,141 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>上海 5 天 4 夜自由行</title>
+<title>五天四夜遊上海</title>
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f2faf7;--card:#fff;--tx:#2d4a44;--mu:#6f8a84;--ac:#2fb5a0;--ac2:#4aa3df;--bd:#d8ebe5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14201e;--card:#1c2c29;--tx:#e4f2ee;--mu:#8fb0a8;--bd:#2c423e;color-scheme:dark}}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Noto Sans TC","PingFang TC",sans-serif;margin:0}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:16px}
-.hero{background:linear-gradient(135deg,#3fb8a0,#5ab4e6 70%,#9fd8f0);color:#fff}
-.tab{padding:.5rem .9rem;border-radius:999px;border:1px solid var(--bd);background:var(--card);white-space:nowrap;font-size:.85rem}
-.tab.on{background:var(--ac);color:#fff;border-color:var(--ac)}
-.tl{border-left:2px solid var(--bd);margin-left:.5rem}
-.dot{position:absolute;left:-.45rem;top:1.1rem;width:.8rem;height:.8rem;border-radius:50%;background:var(--ac2)}
-.done .ttl{text-decoration:line-through;opacity:.5}
-.done .dot{background:#7cc47f}
-.chip{font-size:.75rem;padding:.15rem .5rem;border-radius:999px;background:rgba(47,181,160,.15);color:#1f8f7e}
-a.map{color:var(--ac2);font-size:.8rem}
-input,textarea{background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:.5rem .7rem;width:100%}
-.nb{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:1rem;background-image:radial-gradient(var(--bd) 1px,transparent 1px);background-size:14px 14px}.nb h3{font-weight:700;font-size:1.05rem;margin:1rem 0 .5rem;color:var(--ac)}.dg{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}@media(max-width:480px){.dg{grid-template-columns:1fr}}.di{display:block;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:.5rem .7rem;font-size:.8rem;color:var(--tx)}.di b{font-size:.9rem}.di .p{float:right;color:#e07a5f;font-size:.75rem}.di span.s{display:block;color:var(--mu);margin-top:.15rem}.wk{background:rgba(47,181,160,.1);border:1.5px dashed var(--ac);border-radius:14px;padding:.7rem .9rem;font-size:.85rem}.wk li{margin:.3rem 0}.th{width:3.2rem;height:3.2rem;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.7rem;background:linear-gradient(135deg,#f4dfe4,#e6ddd3)}
+:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#0a1222;--card:#111c33;--gold:#d4af6a;--brick:#b5523b;--ink:#ece6d6;--mut:#9aa5b8}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans TC',system-ui,sans-serif}
+.serif{font-family:'Noto Serif TC',Georgia,serif}
+.gold{color:var(--gold)}
+.hero{background:radial-gradient(900px 400px at 75% 10%,rgba(212,175,106,.22),transparent),linear-gradient(180deg,#0a1222,#16223d 70%,#0a1222)}
+summary{cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}
+.tl{border-left:1px solid rgba(212,175,106,.4)}
+.chip{border:1px solid rgba(212,175,106,.45);border-radius:999px;padding:.3rem .8rem;font-size:.85rem;display:inline-block}
+.chip.c{border-color:var(--brick);color:#e8a48f}.chip.f{border-color:#6b8fb5;color:#a9c4e0}
+mark{background:var(--gold);color:#0a1222;border-radius:2px}
+@media print{body{background:#fff;color:#111}.noprint{display:none!important}.panel{display:block!important}details>*{display:block!important}.hero{background:#fff}.gold{color:#7a5c1e}}
 </style>
 </head>
 <body>
-<header class="hero px-5 pt-10 pb-8">
-  <div class="max-w-3xl mx-auto">
-    <p class="text-sm opacity-80">SHANGHAI · 2026.10.30 – 11.03</p>
-    <h1 class="text-3xl md:text-4xl font-bold mt-1">上海 5 天 4 夜自由行</h1>
-    <p class="mt-2 opacity-90">武康路 · 外灘 · 陸家嘴 · 烏鎮 · 迪士尼</p>
-    <div class="mt-4 flex gap-3 text-sm flex-wrap">
-      
-      <span class="bg-white/20 rounded-full px-3 py-1" id="prog"></span>
-    </div>
-    <p class="mt-3 text-xs opacity-80">住宿：云和夜泊酒店（普陀區武寧路 503 號）</p>
-  </div>
+<header class="noprint sticky top-0 z-30 backdrop-blur bg-[#0a1222]/85 border-b border-[#d4af6a]/20" style="padding-top:env(safe-area-inset-top,0px)">
+ <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-3">
+  <a href="#top" class="serif gold font-bold tracking-widest">滬 · 漫遊</a>
+  <nav class="flex gap-4 text-sm text-[#9aa5b8] ml-4"><a href="#plan">行程</a><a href="#food">美食飲品</a><a href="#essentials">行前須知</a></nav>
+ </div>
 </header>
 
-<main class="max-w-3xl mx-auto px-4 -mt-4 pb-16">
-  <nav id="tabs" class="flex gap-2 overflow-x-auto py-2"></nav>
-  <section id="day" class="mt-2"></section>
+<section id="top" class="hero text-center px-4 pt-20 pb-16">
+ <div class="w-20 h-20 mx-auto rounded-full border-2 border-[#d4af6a] flex items-center justify-center serif text-3xl gold bg-[#111c33]">旅</div>
+ <p class="mt-10 tracking-[.4em] text-xs gold">SHANGHAI · 2026.10.30 – 11.03</p>
+ <h1 class="serif text-4xl sm:text-6xl font-bold mt-4 leading-tight gold">五天四夜遊上海</h1>
+ <svg viewBox="0 0 600 120" class="mx-auto mt-10 w-full max-w-2xl" fill="#d4af6a" opacity=".8"><path d="M0 120V95h40V80h20V95h30V70h14V95h40V60h10V95h36V88h24V95h30V40h8V20h4V40h8V95h20V55a12 12 0 0124 0V95h30V50h10V12h4V50h10V95h30V65h18V95h30V75h24V95h40V82h30V95h54V120z"/><circle cx="300" cy="70" r="9"/><circle cx="300" cy="52" r="6"/></svg>
+ <div class="mt-8 flex flex-wrap justify-center gap-3">
+  <a href="#plan" class="px-6 py-2.5 rounded-full bg-[#d4af6a] text-[#0a1222] font-medium">開始探索行程</a>
+  <a href="#food" class="px-6 py-2.5 rounded-full border border-[#d4af6a]/60">美食飲品清單</a>
+ </div>
+</section>
 
-  
+<main class="max-w-5xl mx-auto px-4">
 
-  <section class="card p-4 mt-6">
-    <h2 class="font-bold text-lg">📝 備忘錄</h2>
-    <textarea id="memo" rows="5" class="mt-3" placeholder="護照、支付寶、地鐵卡、預約資訊…"></textarea>
-  </section>
-  <p class="text-center text-xs mt-6" style="color:var(--mu)">打卡、預算與備忘錄只存在此裝置的瀏覽器中。營業時間請出發前再確認。</p>
+ <section id="plan" class="py-12">
+  <div class="flex flex-wrap items-end justify-between gap-3 mb-6">
+   <h2 class="serif text-2xl sm:text-3xl">每日行程 <span class="gold text-base">Itinerary</span></h2>
+   <div class="noprint flex gap-2 text-sm">
+    <button id="copy" class="px-4 py-2 rounded-full border border-[#d4af6a]/50 hover:bg-[#d4af6a]/10">📋 複製行程</button>
+    <button id="pdf" class="px-4 py-2 rounded-full bg-[#b5523b] text-white">⬇ 下載 PDF</button>
+   </div>
+  </div>
+  <div id="tabs" class="noprint flex gap-2 overflow-x-auto pb-3"></div>
+  <div id="panels"></div>
+ </section>
+
+ <section id="food" class="py-12 border-t border-[#d4af6a]/20">
+  <h2 class="serif text-2xl sm:text-3xl mb-2">美食飲品清單 <span class="gold text-base">Eat &amp; Drink</span></h2>
+  <p class="text-sm text-[#9aa5b8] mb-6">📞 訂位：可直接撥打餐廳電話，或用微信小程序訂位。</p>
+  <h3 class="serif gold text-lg mb-3">🧋 必喝飲品</h3>
+  <div id="drinks" class="grid gap-3 sm:grid-cols-2 md:grid-cols-3 mb-8"></div>
+  <h3 class="serif gold text-lg mb-3">🍜 必吃美食</h3>
+  <div id="eats" class="grid gap-3 sm:grid-cols-2 md:grid-cols-3"></div>
+ </section>
+
+ <section id="essentials" class="py-12 border-t border-[#d4af6a]/20">
+  <h2 class="serif text-2xl sm:text-3xl mb-2">行前須知 <span class="gold text-base">Travel Essentials</span></h2>
+  <p class="text-sm text-[#9aa5b8] mb-6">出發前確認準備事項，讓旅程更順暢。</p>
+  <div class="grid gap-4 md:grid-cols-2">
+   <div class="rounded-xl bg-[#111c33] border border-[#d4af6a]/15 p-5"><h3 class="serif gold text-lg mb-3">📱 必備 App 準備</h3><ul class="space-y-2 text-sm leading-relaxed"><li>💳 <b>行動支付：</b>支付寶 / 微信支付（綁定信用卡）</li><li>🗺️ <b>地圖導航：</b>高德地圖 / 百度地圖</li><li>🚗 <b>叫車出行：</b>滴滴出行</li></ul></div>
+   <div class="rounded-xl bg-[#111c33] border border-[#d4af6a]/15 p-5"><h3 class="serif gold text-lg mb-3">🎒 隨身證件與網路</h3><ul class="space-y-2 text-sm leading-relaxed"><li>📄 <b>證件：</b>台胞證（正本且需在有效期內）</li><li>🌐 <b>網路：</b>免翻牆 eSIM 或漫遊（LINE/FB/IG才可正常使用）</li><li>🔋 <b>行動電源：</b>需有清晰容量標示（帶上飛機切勿托運）</li><li>🔌 <b>電壓：</b>220V（多數手機/相機變壓器皆支援雙電壓）</li></ul></div>
+   <div class="rounded-xl bg-[#111c33] border border-[#d4af6a]/15 p-5"><h3 class="serif gold text-lg mb-3">🚕 打車定位小貼士</h3><ul class="space-y-2 text-sm leading-relaxed"><li>🏛️ <b>武康大樓：</b>直接定位「武康大樓」，下車就能拍照打卡</li><li>🌉 <b>外灘：</b>定位「外灘觀景平台」或「中山東一路」，不要定「外灘」，範圍太大司機找不到</li><li>🗼 <b>陸家嘴：</b>定位「東方明珠」或「國金中心」，下車就是拍照位</li><li>🏮 <b>豫園：</b>定位「豫園商城」，下車步行即達</li></ul></div>
+   <div class="rounded-xl bg-[#111c33] border border-[#d4af6a]/15 p-5"><h3 class="serif gold text-lg mb-3">💡 實用小提醒</h3><ul class="space-y-2 text-sm leading-relaxed"><li>🎟️ <b>迪士尼：</b>提前下載「上海迪士尼度假區」App 綁定門票</li><li>🌃 <b>外灘燈光：</b>通常 nightly 22:00 熄燈，建議提早前往</li></ul></div>
+  </div>
+ </section>
+
 </main>
 
 <script>
 const D=[
-{d:"10/30 (五)",t:"抵達・入住",items:[
-{tm:"18:25",n:"抵達浦東機場",i:"入境、領行李（約 18:25–20:00），搭車前往飯店。",tr:"機場→武寧路：地鐵 2 號線轉乘或叫車，約 1–1.5 小時",q:"上海浦东国际机场"},
-{tm:"20:30",n:"入住云和夜泊酒店",i:"普陀區武寧路 503 號。",q:"上海市普陀区武宁路503号"},
-{tm:"21:00",n:"月星環球港 宵夜",i:"距飯店車程約 8 分鐘。",f:"佳家湯包（10:00–21:00）、阿嬤手作（10:00–22:00）、小楊生煎（10:00–22:00）",q:"月星环球港"}]},
-{d:"10/31 (六)",t:"武康路 → 外灘 → 陸家嘴夜景",items:[
-{tm:"07:00",n:"武康大樓",i:"趁人潮未湧入先拍照。",q:"武康大楼"},
-{tm:"07:30",n:"武康路散步",i:"梧桐樹與歷史建築。",q:"武康路"},
-{tm:"09:00",n:"安福路",i:"咖啡與逛街，HARMAY 話梅等店開門後再逛。",f:"13DE MARZO（巨型熊熊外牆）、B&C 黃油與麵包（貝果/黃油可頌）",q:"安福路"},
-{tm:"11:30",n:"淮海中路 + 新天地",i:"石庫門建築、拍照、午餐。",f:"老弄堂麵館（蛤蜊豬肝麵/蔥油拌麵）、裕興記（蟹黃麵）",q:"上海新天地"},
-{tm:"14:30",n:"南京路步行街",i:"可買下午茶或點心。",f:"小楊生煎南京東路店（7:30–21:30）、鮮得來排骨年糕（營業至 01:00）",tr:"步行約 15 分鐘到外灘",q:"南京路步行街"},
-{tm:"15:30",n:"外灘周邊建築攝影",i:"四季民福 → 乍浦路橋 → 新天安堂 → 洛克外灘源 → 北京東路紅磚牆。",f:"hoxa bistro（11:00–16:30 / 17:00–22:00）",q:"洛克外滩源"},
-{tm:"17:00",n:"陸家嘴天際線",i:"近看東方明珠、上海中心、環球金融中心，濱江步道拍照。",f:"小楊生煎東方明珠店（6:30–24:00）、園苑上海菜正大廣場（11:00–21:30）",q:"陆家嘴滨江大道"},
-{tm:"18:30",n:"東昌路碼頭渡輪",i:"搭東金線渡輪（¥2，支付寶/微信）到金陵東路碼頭，江心同時看兩岸。",q:"东昌路码头"},
-{tm:"19:00",n:"北外灘 / 外灘夜景",i:"白玉蘭廣場一帶看陸家嘴亮燈，人多時的替代方案；外灘可去 Vue Bar（Hyatt 32–33 樓）或 The Captain 船長酒吧。",f:"鮮得來北外灘店（10:00–20:30）、蟹珍香外灘店（10:00–24:00）",q:"白玉兰广场"},
-{tm:"21:00",n:"城隍廟 + 豫園夜景",i:"傳統建築夜間燈景，兩地步行約 5 分鐘。",f:"南翔饅頭店、蟹珍香豫園店（9:30–23:00）、霸王茶姬豫園店、裕蓮茶樓",q:"豫园"}]},
-{d:"11/1 (日)",t:"烏鎮一日遊",items:[
-{tm:"早上",n:"出發前往烏鎮",i:"依旅行團/包車集合時間為準，霸王別姬為當日參考。",tr:"上海→烏鎮約 2 小時車程",q:"乌镇游客中心"},
-{tm:"上午",n:"烏鎮遊客中心 → 木心美術館",i:"西柵景區入園，參觀木心美術館。",q:"木心美术馆"},
-{tm:"中午",n:"草木本色染坊 / 喜慶堂",i:"藍印花布染坊與傳統民俗。",q:"草木本色染坊 乌镇"},
-{tm:"下午",n:"昭明書院 → 烏鎮郵局 → 白蓮塔",i:"沿水鄉走完經典點。",q:"白莲塔 乌镇"},
-{tm:"19:00",n:"萊萊小籠 + 南京路步行街",i:"回程後吃蟹粉小籠與蟹粉拌麵（營業至約 20:00–21:00，建議提早到），再逛霓虹夜景。",f:"萊萊小籠（9:00–14:30 / 15:30–21:00）",tr:"人民廣場或南京東路搭地鐵回飯店",q:"莱莱小笼 天津路"}]},
-{d:"11/2 (一)",t:"上海迪士尼",items:[
-{tm:"08:00",n:"上海迪士尼樂園",i:"建議開園前到，先用 App 查熱門設施排隊時間並預約快速通行。",tr:"地鐵 11 號線迪士尼站",q:"上海迪士尼乐园"},
-{tm:"19:00",n:"晚餐：Alimentari Grande",i:"道地義大利麵，Chill 氛圍。徐匯區東湖路 20 號。",f:"義大利麵、披薩",tr:"回飯店約 17 分鐘",q:"东湖路20号 Alimentari Grande"}]},
-{d:"11/3 (二)",t:"返程",items:[
-{tm:"08:30",n:"早餐 + 退房",i:"13:00 班機，建議 10:00 前出發。",q:"上海市普陀区武宁路503号"},
-{tm:"10:00",n:"前往浦東機場",i:"預留國際線報到與安檢時間（至少 2.5 小時前抵達）。",q:"上海浦东国际机场"}]}
-];
-const K="sh_trip_v1";let S={done:{},exp:[],rate:4.4,memo:""};
-try{Object.assign(S,JSON.parse(localStorage.getItem(K)||"{}"))}catch(e){}
-function save(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
-let cur=0;
-const SE=[[/機場/,'✈️'],[/酒店|入住|退房/,'🏨'],[/環球港|南京路/,'🛍️'],[/陸家嘴|夜景|北外灘/,'🌃'],[/渡輪/,'⛴️'],[/武康|安福|淮海|新天地|外灘|建築/,'🏛️'],[/豫園|城隍/,'🏮'],[/美術館|書院|郵局/,'🖼️'],[/烏鎮|染坊|白蓮塔/,'🛶'],[/迪士尼/,'🏰'],[/早餐|晚餐/,'🍽️']];
-const FE=[[/生煎|湯包|小籠|饅頭/,'🥟'],[/麵/,'🍜'],[/咖啡|茶|熊熊/,'☕'],[/貝果|可頌|麵包/,'🥐'],[/義大利|披薩/,'🍝'],[/排骨|年糕/,'🍖'],[/酒吧|Bar/,'🍸']];
-function pick(L,s,d){for(const[r,e]of L)if(r.test(s))return e;return d}
-function tile(e,c){return `<div class="text-center"><div class="th">${e}</div><div style="font-size:.6rem;color:var(--mu)">${c}</div></div>`}
-function th(it){return tile(pick(SE,it.n,'📍'),'景點')+(it.f?tile(pick(FE,it.f,'🍽️'),'美食'):'')}
-function tabs(){document.getElementById("tabs").innerHTML=D.map((x,i)=>`<button class="tab ${i==cur?"on":""}" onclick="cur=${i};render()">Day ${i+1} · ${x.d.split(" ")[0]}</button>`).join("")+`<button class="tab ${cur==5?"on":""}" onclick="cur=5;render()">☕ 飲品指南</button><button class="tab ${cur==6?"on":""}" onclick="cur=6;render()">🍴 美食清單</button>`}
-const TEA=[["1點點","12-20","台灣同源，波霸奶茶、四季奶青最對味"],["FIFTYLAN","9-22","五十嵐海外版，常需排隊"],["茉莉奶白","17-21","東方白花香系，茉莉奶白、白蘭清爽不膩"],["霸王茶姬","18-22","伯牙絕弦＝茉莉雪芽＋鮮牛乳"],["喜茶 HEYTEA","25-35","芝士奶蓋始祖，多肉葡萄、芒芒甘露"],["奈雪的茶","25-35","鮮果茶＋軟歐包，適合坐下來喝"],["滬上阿姨","14-20","上海本土品牌，血糯米奶茶、厚芋泥波波"],["蜜雪冰城","4-10","最便宜的手搖，檸檬水、冰淇淋解暑"]];
-const COF=[["星巴克臻選烘焙工坊","60-120","南京西路 789 號，現場烘豆"],["瑞幸 Luckin","9.9-20","生椰拿鐵首創，門市超密"],["%Arabica","約 45","武康庭院透明玻璃屋，西班牙拿鐵"],["Manner","15-25","上海本土，北外灘店門口正對東方明珠"],["Seesaw","25-35","精品咖啡老牌，冷萃與單品豆"],["皮爺咖啡 Peet's","30-45","加州深焙老牌，奶咖厚實順口"]];
-function grid(L){return '<div class="dg">'+L.map(a=>`<a class="di" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=${encodeURIComponent(a[0].replace(/ .*/,'')+' 上海')}&src=shanghai-trip&callnative=0"><span class="p">¥${a[1]}</span><b>${a[0]}</b><span class="s">${a[2]}</span></a>`).join('')+'</div>'}
-function drinks(){document.getElementById("day").innerHTML=`<div class="nb mt-3"><p class="text-xs text-center" style="color:var(--ac)">✦ 上海旅遊筆記 ✦</p><h2 class="text-2xl font-bold mt-1">奶茶 & 咖啡 <span class="text-base font-semibold">續命清單</span></h2><p class="text-sm mt-1" style="color:var(--mu)">手搖珍奶 / 花香鮮奶茶 / 精品咖啡 · 一杯約 ¥9–35 · 甜度冰量都能調</p><h3>🧋 奶茶：8 家口袋名單</h3>${grid(TEA)}<h3>☕ 咖啡：6 家口袋名單</h3>${grid(COF)}<h3>🚶 武康路咖啡散步</h3><ol class="wk"><li>武康大樓（武康路 439 號）：1924 年船型老建築，最佳拍照位</li><li>老麥咖啡館 The Cottage Bar：大樓底層，南法復古風、拼花地磚</li><li>%Arabica 武康庭店（武康路 376 號）：巷子裡的白色玻璃屋</li><li>集雅 Gathering（135 號）/ Plusone（286 號）：木質老屋、森林系座位</li><li>安福路 13DE MARZO CAFÉ：每杯飲品掛一隻毛絨小熊，拍照神器</li><li>地鐵 10/11 號線「交通大學站」下車，整條路線慢慢走約 2 小時</li></ol><p class="wk mt-3" style="border-style:dashed">📌 排隊攻略：喜茶用微信小程序、瑞幸用 App 先下單再去取；甜度建議五到七分糖，台灣口味大多覺得全糖太甜。</p><p class="text-xs mt-2" style="color:var(--mu)">價格取自你提供的截圖，僅供參考。點店名可用高德搜尋。</p></div>`;prog()}
-function render(){tabs();if(cur==5){drinks();return}if(cur==6){foods();return}const x=D[cur];
-document.getElementById("day").innerHTML=`<h2 class="font-bold text-xl mt-3">${x.d} ${x.t}</h2><div class="tl mt-3">`+x.items.map((it,j)=>{const id=cur+"-"+j,dn=S.done[id];
-return `<div class="relative pl-5 pb-4 ${dn?"done":""}"><span class="dot"></span><div class="card p-3"><label class="flex gap-3 items-start cursor-pointer"><input type="checkbox" style="width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none" ${dn?"checked":""} onchange="tg('${id}')"><div><div class="ttl font-semibold"><span class="chip mr-2">${it.tm}</span>${it.n}</div></div></label><p class="text-sm mt-2" style="color:var(--mu)">${it.i}</p>${it.f?`<p class="text-sm mt-2">🍜 ${it.f}</p>`:""}${it.tr?`<p class="text-sm mt-1">🚇 ${it.tr}</p>`:""}<a class="map inline-block mt-2" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=${encodeURIComponent(it.q)}&src=shanghai-trip&callnative=0">📍 高德地圖</a></div></div>`}).join("")+`</div>`;prog()}
-function tg(id){S.done[id]=!S.done[id];save();render()}
-function prog(){let t=0,n=0;D.forEach((d,i)=>d.items.forEach((_,j)=>{t++;if(S.done[i+"-"+j])n++}));document.getElementById("prog").textContent=`✅ 已完成 ${n}/${t}`}
-function cd(){const d=Math.ceil((new Date("2026-10-30T18:25:00+08:00")-new Date())/864e5);document.getElementById("cd").textContent=d>0?`⏳ 距離出發 ${d} 天`:d>-5?"✈️ 旅程進行中":"旅程結束"}
-function addExp(){const n=bn.value.trim(),a=parseFloat(ba.value);if(!n||isNaN(a))return;S.exp.push({n,a});bn.value=ba.value="";save();bud()}
-function delExp(i){S.exp.splice(i,1);save();bud()}
-function saveRate(){S.rate=parseFloat(rate.value)||4.4;save();bud()}
-function bud(){bl.innerHTML=S.exp.map((e,i)=>`<li class="flex justify-between py-1 border-b" style="border-color:var(--bd)"><span>${e.n.replace(/</g,"&lt;")}</span><span>¥${e.a.toFixed(0)} <button onclick="delExp(${i})" style="color:var(--ac)">✕</button></span></li>`).join("");const s=S.exp.reduce((a,e)=>a+e.a,0);bt.textContent=`合計 ¥${s.toFixed(0)} ≈ NT$${Math.round(s*S.rate).toLocaleString()}`}
-const DR=[['霸王茶姬','推薦：伯牙絕弦、花田烏龍、白霧紅塵',['浦東機場 T2 3 樓出發大廳 E 值機島附近（2A-13）：安檢前，飲料不能帶過安檢，要在安檢前喝完','浦東機場 T2 安檢後 G148 登機口附近、星巴克對面：24 小時營業，可帶上飛機','南京東路步行街、外灘、人民廣場一帶：最熱門、排隊最久，一到商圈先用微信小程式點餐','武康路店','豫園店：福佑路 234 號 1 樓，近城隍廟與豫園','烏鎮也有分店']],['紅茶公司','推薦：招牌紅茶或紅茶拿鐵（我的建議，點招牌最保險）',['上海靜安店：南京西路 1515 號，10:00-21:00']],['阿嬤手作','推薦：店內招牌手作飲品（我的建議，現場看招牌推薦）',['環球港店 10:00-22:00（距飯店車程約 8 分鐘）','新天地店 9:00-22:00','豫園店 9:00-22:00','上海國金中心店 9:00-22:00（浦東陸家嘴國金中心）','迪士尼小鎮店 10:00-22:00','小程式每天 10:00 開放，熱門店（如新天地）10:05 可能就顯示「預計等待 3 小時」']],['13DE MARZO CAFÉ','推薦：熊熊咖啡（每杯掛一隻毛絨小熊）、拿鐵',['安福路旗艦店 10:00-21:30：安福路與武康路交叉口（徐匯區），外牆有巨型熊熊','新天地店 10:00-21:30']],['瑞幸 Luckin','推薦：生椰拿鐵',['門市很多，用 App 先下單再去取']],['茉莉奶白','推薦：茉莉奶白（我的建議，招牌款）',['路線上順路刷一杯']],['樓下酸奶','推薦：原味或水果酸奶（我的建議）',['路線上順路刷一杯']]];
-const FD=[['🥐 麵包',[['B&C 黃油與麵包','推薦：貝果、黃油可頌',['安福路一帶，可排在武康路／淮海路途中順路買']]]],['🍸 高空酒吧',[['Vue Bar','外灘 Hyatt 32–33 樓，看夜景',['上海外灘 Hyatt 32–33 樓']]]],['🥟 上海必吃',[['1. 佳家湯包','第一名湯包',['黃河路店 7:00-20:30','靜安店 10:00-21:00','環球港店 10:00-21:00（距飯店車程約 8 分鐘）']],['2. 老弄堂麵館','蛤蜊豬肝麵、蔥油拌麵｜各店 10:00-14:30、15:30-20:30',['淮海路店：黃浦區陝西南路 55 號','定西路店：定西路 685 號','靜安寺店：北京西路 1738 號','廣東路店：黃浦區廣東路 500 號（南京東路站 4 口）','上海體育館店：徐匯區裕德路 126 號']],['3. 萊萊小籠包','蟹粉小籠包',['天津路 506 號（黃浦區），地鐵 1 號線人民廣場步行 580 公尺｜9:00-14:30、15:30-21:00','豐盛里直營店：靜安區茂名北路 277 號｜9:00-14:30、15:30-21:30']],['4. 裕興記麵館','蟹黃麵',['外灘店 10:00-23:00','人民廣場店 9:00-22:00','南京西路靜安寺店 7:00-22:00']],['5. 蟹珍香','蟹黃麵',['豫園店 9:30-23:00','外灘店 10:00-24:00']],['6. 鴻姊老火鍋','',['上海旗艦店 11:00-凌晨 2:00']],['7. 蟹尊苑','',['巨鹿店 11:00-21:30']],['8. Alimentari Grande','義大利麵',['徐匯區東湖路 20 號，8:30-24:00，回飯店約 17 分鐘']],['9. 夢春閣生煎包','生煎包鼻祖',['黃浦區浙江中路 425 號，9:00-19:30']],['10. 小楊生煎','',['南京東路店 7:30-21:30（南京東路 720 號第一食品商店 2 樓）','黃河路店 6:30-22:30','九江路店 6:30-23:00','寧波路店 6:30-21:00','宏伊國際廣場店 8:30-22:00','外灘 neo 店 6:30-23:30','白玉蘭廣場店 10:00-21:30','東方明珠店 6:30-24:00']],['11. 園苑上海菜','',['淮海路店、新世界店、靜安寺店、徐家匯店 11:00-21:30','宏伊國際廣場店 11:00-15:00、16:40-21:30','上海中心店 8:30-21:00','正大廣場店 11:00-21:30']],['12. 四季民福烤鴨','',['外灘店 10:30-22:30','靜安店 10:30-22:30']],['13. 鮮得來排骨年糕','',['雲南南路總店：寧海東路 290 號，7:00-22:00','山西南路店：山西南路 19 號','福建中路店 11:00-凌晨 1:00']],['14. 麟笼坊','',['（尚未填入分店資訊）']],['15. 南翔饅頭店','',['豫園老街 87 號（黃浦區）']]]]];
-function card(a,k){return `<div class="di" style="margin-bottom:.6rem"><b>${a[0]}</b>${a[1]?`<span class="s" style="color:#1f8f7e">${a[1]}</span>`:''}<ul style="color:var(--mu);margin:.3rem 0 .3rem .9rem;list-style:disc">${a[2].map(l=>`<li>${l}</li>`).join('')}</ul><a class="map" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=${encodeURIComponent(a[0].replace(/^\d+\. /,'')+' 上海')}&src=shanghai-trip&callnative=0">📍 高德地圖</a></div>`}
-function drinks(){document.getElementById('day').innerHTML=`<div class="nb mt-3"><h2 class="text-2xl font-bold">☕ 飲品指南</h2><p class="wk mt-2">推薦品項中，霸王茶姬、瑞幸為你提供的資料，其餘是我的建議，點單前可看店內招牌。</p>${DR.map(card).join('')}</div>`;prog()}
-function foods(){document.getElementById('day').innerHTML=`<div class="nb mt-3"><h2 class="text-2xl font-bold">🍴 美食清單</h2>${FD.map(s=>`<h3>${s[0]}</h3>`+s[1].map(card).join('')).join('')}<p class="text-xs mt-2" style="color:var(--mu)">營業時間以各店當日公告為準。</p></div>`;prog()}
-memo.value=S.memo;memo.oninput=()=>{S.memo=memo.value;save()};
-render();
+{d:"Day 1",date:"10/30 (五)",t:"抵達 · 入住",items:[
+["18:25–20:00","浦東機場入境、領行李","18:25 抵達浦東機場，辦理入境與領行李。","約 1.5 小時","機場出發：滴滴叫車",[],"必去"],
+["晚間","入住 上海武寧路云和夜泊酒店","地址：上海市普陀区武宁路503号","—","滴滴叫車",[],"住宿"],
+["晚餐","上海月星環球港","環球港離飯店開車約 8 分鐘。",  "約 1.5 小時","開車 8 分鐘",["佳家湯包環球港店 10:00-21:00","阿嬤手作 環球港店 10:00-22:00（必點芋頭類）","小楊生煎包 月星環球港 10:00-22:00（汁多大蝦）","李若桃(10:00-22:00)"],"美食"]]},
+{d:"Day 2",date:"10/31 (六)",t:"經典海派 · 日夜雙拍",items:[
+["07:00","① 武康大樓＋武康路＋安福路","武康大樓拍照，趁人潮還沒湧入。路線：武康大樓 → 步行 2 分鐘到武康路・武康庭 → 羅密歐陽台 → 巴金故居 → 安福路（步行約 10 分鐘）。愚園路可去可不去。","約 2 小時","步行/滴滴叫車",["HARMAY 話梅","13DE MARZO CAFÉ 安福路旗艦店：打卡外牆巨型熊熊，買杯熊熊咖啡","B&C 黃油與麵包：招牌貝果／黃油可頌","定興路6號蛋餅（早餐）"],"咖啡"],
+["上午–午餐","② 淮海中路＋新天地＋午餐","從安福路往淮海中路移動，想逛街可沿路選擇性購物；新天地適合看石庫門建築、拍照、吃午餐。B&C 可安排在此段或途中順路門市。","約 3 小時","步行/滴滴叫車",["紅茶公司（靜安／南京西路順路）：手沖迪拜巧克力","瑞幸／茉莉奶白／樓下酸奶","滬西老弄堂麵館 淮海路店（蛤蜊豬肝麵／蔥油拌麵）","味香齋（淮海中路）：麻將拌麵、餛飩","老吉士上海本幫菜：紅燒肉、鱔絲、菜飯、腐竹嗆蘑菇、心太軟","鮮得來排骨年糕 福建中路店（營業至 01:00）：必點年糕排骨","東泰祥生煎包（可吃可不吃）"],"美食"],
+["上午–下午","②-1 淮海中路逛街路線","路線：淮海中路地鐵站 → 巨富氏街區沿街 → K11 藝術購物中心 → 新天地南里 → 新天地北里 → 石庫門建築群 → 復興 SOHO → 傍晚夜景漫步。","彈性","步行",["🛍️ 淮海中路・魔都摩登文藝起點：Housnowhere（巨人展、巨型米奇、銀色 F1）","🍵 Matcha Wang（刷屏 IG 的抹茶特調）","🛍️ Hai550（7 層樓的小眾設計師集合店）","🏊 Masonprince（漩渦泳池、戴 VR 的仿真人）","🎨 K11 藝術購物中心：逛累了的絕佳中轉站，有商場與小眾藝術空間","🌿 思南路：古董花園，《繁花》取景地","🥐 倫敦小狗麵包（高顏值麵包，新天地南里～北里）","🧸 Looknow lab（超多 Jellycat）","🥯 紐約貝果博物館（新天地老網紅）","🛍️ HARMAY 話梅"],"必去"],
+["下午","②-2 南京路步行路線","沿南京路步行街散步逛街，感受老上海的商業街氛圍。","彈性","步行",["萊萊小籠包（南京路步行街步行 6 分鐘）9:00-14:30、15:30-21:00：必點蟹黃湯包、炸豬排","李百蟹外灘南京路店｜蟹黃麵(10:00-22:00)"],"美食"],
+["下午","③ 外灘周邊建築攝影","路線：四季民福 → 乍浦路橋 → 新天安堂 → 洛克外灘源 → 北京東路紅磚牆 → 德克士外灘店。南京路步行街到外灘步行約 15 分鐘。","約 2.5 小時","步行/滴滴叫車",["四季民福：烤鴨可點半隻＋老北京炸醬麵（建議先電話／微信訂位）","餐廳：hoxa bistro 11:00-16:30、17:00-22:00"],"必去"],
+["傍晚","④ 陸家嘴現代天際線","近距離欣賞東方明珠、上海中心大廈與環球金融中心，可在濱江步道拍攝城市天際線。","約 1.5 小時","步行/滴滴叫車",["小楊生煎包 東方明珠店 6:30-24:00","園苑上海菜 正大廣場店 11:00-21:30（必點紅燒肉）"],"必去"],
+["日落後","⑤ 北外灘濱江夜景","前往白玉蘭廣場附近北外灘，欣賞陸家嘴大樓逐漸亮燈。路線：上海白玉蘭廣場入口 → 江景景觀餐廳群 → The Stage 頂層觀景台 → 北外灘濱江沿岸 → 外白渡橋 → Condé 露台吧。也是外灘人潮太多時的替代方案。","約 1 小時","步行/滴滴叫車",["小楊生煎包 白玉蘭廣場店 10:00-21:30","鮮得來排骨 北外灘店 10:00-20:30","Condé 露台吧"],"必去"],
+["夜晚","⑥ 外灘夜景","萬國建築群燈光亮起，沿江欣賞對岸陸家嘴。","約 1.5 小時","步行/滴滴叫車",["Vue Bar（外灘 Hyatt 32~33 樓）","裕興記麵館 外灘店(10:00-23:00)","蟹珍香（蟹黃麵）外灘店 10:00-24:00"],"必去"],
+["夜晚","⑦ 城隍廟＋豫園夜景","豫園商城、城隍廟一帶欣賞傳統中式建築夜間燈景；豫園走路到城隍廟 5 分鐘。萊萊小籠可安排在南京東路附近，品嚐蟹粉小籠包。","約 1.5 小時","步行/滴滴叫車",["萊萊小籠 9:00-14:30、15:30-21:00","蟹珍香（蟹黃麵）豫園店 9:30-23:00","南翔饅頭店（黃浦區豫園老街87號）","霸王茶姬 上海豫園店：伯牙絕弦，完美結尾","裕蓮茶樓：奶茶厲害、茶香拿鐵、特濃茶鑽琥珀奶、蛋塔"],"必去"],
+["加碼","陸家嘴天橋渡輪","陸家嘴散步至東昌路碼頭，刷支付寶／微信搭乘東金線渡輪（RMB 2 元）至金陵東路碼頭。站在船舷邊，從江心同時欣賞兩岸亮起的大樓與萬國建築，視野極佳又省錢。","約 30 分鐘","渡輪 東昌路碼頭 → 金陵東路碼頭",[],"必去"]]},
+{d:"Day 3",date:"11/1 (日)",t:"烏鎮一日遊",items:[
+["全天","🗓️ 烏鎮一日遊","霸王別姬。景點：烏鎮遊客中心 → 木心美術館 → 草木本色染坊 → 喜慶堂 → 昭明書院 → 烏鎮郵局 → 白蓮塔。","約 8–9 小時","高鐵／包車（依訂票調整）",[],"必去"],
+["彈性","前一天沒走到的行程可再安排","可補排 Day 2 未走完的景點，人和館（蟹粉撈飯必點）。","彈性","—",["人和館(靜安店)17:00-21:30：蟹粉撈飯一定要點"],"備案"],
+["晚餐／宵夜","南京路步行街 ＋ 萊萊小籠","烏鎮回程解散後直接前往萊萊小籠（位於天津路，營業至 20:00~21:00），享用蟹粉小籠包與蟹粉拌麵！食畢沿南京路步行街散步，感受商業街氛圍與夜間霓虹，為行程畫下句點。","約 2 小時","回程：滴滴叫車回飯店",["萊萊小籠（天津路）：蟹黃湯包、炸豬排","李若桃(10:00-22:00)：招牌飲品(上海月星環球港)","李百蟹外灘南京路店｜蟹黃麵(10:00-22:00)"],"美食"]]},
+{d:"Day 4",date:"11/2 (一)",t:"迪士尼樂園",items:[
+["全天","上海迪士尼度假區","夢幻童話的一天，建議開園前抵達。","約 10 小時","滴滴叫車",[],"必去"],
+["晚餐","Alimentari Grande","東湖路／淮海中路附近，道地義大利麵與 Chill 氛圍。地址：徐匯區東湖路20號。","約 1.5 小時","回飯店約 17 分鐘",["Alimentari Grande"],"美食"]]},
+{d:"Day 5",date:"11/3 (二)",t:"返程",items:[
+["13:00","搭乘 13:00 班機返家","建議提前 3 小時抵達機場；早上可悠閒退房、買伴手禮。","—","滴滴叫車",[],"返程"]]}];
+const DR=[
+["裕蓮茶樓","奶茶厲害、茶香拿鐵、特濃茶鑽琥珀奶、蛋塔"],
+["瑞幸","新品「牛油果羽衣酸」、生椰拿鐵"],
+["阿嬤手作","芋頭類"],
+["茉莉奶白","珍王系列、開心果茉莉椰（開心果奶蓋鹹香＋椰子汁清甜；椰子汁本身微甜，推薦不加糖）、黃皮青芒"],
+["霸王茶姬","伯牙絕弦"],
+["李若桃","招牌"],
+["紅茶公司","手沖迪拜巧克力"]];
+const EA=[
+["定興路6號蛋餅","早餐蛋餅"],
+["李百蟹","有酒香味、不膩口，好吃"],
+["小楊生煎","汁多、大蝦"],
+["萊萊小籠","必點蟹黃湯包、炸豬排"],
+["鮮得來","必點年糕排骨"],
+["人和館","蟹粉撈飯一定要點"],
+["東泰祥生煎包","生煎包"],
+["滬西老弄堂麵館","老弄堂麵食"],
+["裕興記","超大湯包"],
+["園苑本幫菜","紅燒肉"],
+["老吉士上海本幫菜","紅燒肉、鱔絲、菜飯、腐竹嗆蘑菇、心太軟"],
+["味香齋（淮海中路）","麻將拌麵、餛飩"],
+["四季民福餐廳","烤鴨可點半隻＋老北京炸醬麵"]];
+const $=id=>document.getElementById(id);
+const bx=a=>a.map(([n,d])=>`<div class="rounded-xl bg-[#111c33] border border-[#d4af6a]/15 p-4"><div class="serif text-base mb-1">${n}</div><div class="text-sm text-[#a9c4e0] leading-relaxed">${d}</div></div>`).join('');
+$('drinks').innerHTML=bx(DR);$('eats').innerHTML=bx(EA);
+function card(it){const[t,n,d,s,m,f]=it;return `<details open class="rounded-xl bg-[#111c33] border border-[#d4af6a]/15 p-4 mb-4 relative"><summary class="flex flex-wrap items-baseline gap-x-3"><span class="gold text-sm font-medium">${t}</span><span class="serif text-lg">${n}</span><span class="ml-auto text-xs text-[#9aa5b8]">▾</span></summary>
+<p class="mt-2 text-sm text-[#ece6d6]/90 leading-relaxed">${d}</p>
+<div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="chip">⏱ ${s}</span><span class="chip c">${m}</span></div>
+${f.length?`<ul class="mt-3 text-sm text-[#a9c4e0] space-y-1">${f.map(x=>`<li>${/^\p{Extended_Pictographic}/u.test(x)?'':'🍴 '}${x}</li>`).join('')}</ul>`:''}</details>`}
+$('tabs').innerHTML=D.map((x,i)=>`<button data-i="${i}" class="tab shrink-0 px-5 py-2 rounded-full border border-[#d4af6a]/40 text-sm"><b class="serif">${x.d}</b> <span class="text-[#9aa5b8]">${x.date}</span></button>`).join('');
+$('panels').innerHTML=D.map((x,i)=>`<div id="day${i}" class="panel ${i?'hidden':''}"><h3 class="serif text-xl mb-4"><span class="gold">${x.d}</span>｜${x.t} <span class="text-sm text-[#9aa5b8]">${x.date}</span></h3><div class="tl pl-4 sm:pl-6">${x.items.map(c=>card(c)).join('')}</div></div>`).join('');
+function show(i){document.querySelectorAll('.panel').forEach((p,j)=>p.classList.toggle('hidden',i!==j));document.querySelectorAll('.tab').forEach((b,j)=>{b.style.background=i===j?'#d4af6a':'transparent';b.style.color=i===j?'#0a1222':''})}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>show(+b.dataset.i));show(0);
+function txt(){return '穿越新舊上海｜5天4夜行程\n\n'+D.map(x=>`【${x.d} ${x.date}】${x.t}\n`+x.items.map(it=>`・${it[0]} ${it[1]}\n  ${it[2]}\n  停留：${it[3]}｜交通：${it[4]}`+(it[5].length?'\n  推薦：'+it[5].join('；'):'')).join('\n')).join('\n\n')}
+$('copy').onclick=async()=>{const b=$('copy');try{await navigator.clipboard.writeText(txt())}catch(e){const t=document.createElement('textarea');t.value=txt();document.body.appendChild(t);t.select();try{document.execCommand('copy')}catch(_){}t.remove()}b.textContent='✅ 已複製';setTimeout(()=>b.textContent='📋 複製行程',1800)};
+$('pdf').onclick=()=>window.print();
 </script>
 </body>
 </html>
